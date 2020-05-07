@@ -1,13 +1,9 @@
 import React from "react";
-import Helmet from 'gatsby-plugin-react-helmet'
-import "../styles/styles.css";
-import Header from "../components/Header";
 import Layout from "../components/Layout";
 
 const Index = () => {
   return (
     <Layout>
-      <Helmet title="foo bar" defer={false} />
       <div className="bg-gray-200 md:overflow-hidden">
         <div className="px-4 py-16">
           <div className="relative w-full md:max-w-2xl md:mx-auto text-center">
