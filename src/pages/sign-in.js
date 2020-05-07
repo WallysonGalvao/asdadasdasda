@@ -5,19 +5,18 @@ import Layout from "../components/Layout";
 import HintMessage from "../components/HintMessage";
 import Input from "../components/Input";
 
-const CreateAccount = () => {
+const SignIn = () => {
   const [error, setError] = useState({ message: "" });
   const [form, setForm] = useState({
     email: "",
     password: "",
-    passwordConfirm: "",
   });
 
-  const register = (e) => {
+  const signIn = (e) => {
     e.preventDefault();
     firebase
       .auth()
-      .createUserWithEmailAndPassword(form.email, form.password)
+      .signInWithEmailAndPassword(form.email, form.password)
       .then(() => navigate("/app"))
       .catch(({ code, message }) => setError({ code, message }));
   };
@@ -27,7 +26,7 @@ const CreateAccount = () => {
     setForm({ ...form, [name]: value });
   };
 
-  const { email, password, passwordConfirm } = form;
+  const { email, password } = form;
 
   return (
     <Layout>
@@ -37,10 +36,10 @@ const CreateAccount = () => {
             <div className="w-full relative">
               <div className="md:mt-6">
                 <div className="text-center font-semibold text-black">
-                  Create your account
+                  Sign In
                 </div>
                 <div className="text-center font-base text-black">
-                  You can start using SmartFrame for free.
+                You can start using SmartFrame for free.
                 </div>
                 <form className="mt-8">
                   <div className="mx-auto max-w-lg">
@@ -59,24 +58,8 @@ const CreateAccount = () => {
                       value={password}
                       type="password"
                     />
-
-                    <Input
-                      field="Password Confirm"
-                      name="passwordConfirm"
-                      onChange={onChange}
-                      value={passwordConfirm}
-                      type="password"
-                    />
-
                     <div className="flex justify-start mt-3 ml-4 p-1">
                       <ul>
-                        <HintMessage
-                          isValid={
-                            password === passwordConfirm && password.length > 0
-                          }
-                          successMessage="Passwords match"
-                          errorMessage="Passwords do not match"
-                        />
                         <HintMessage
                           isValid={password.length > 7}
                           successMessage="The minimum length is reached"
@@ -88,47 +71,26 @@ const CreateAccount = () => {
                         )}
                       </ul>
                     </div>
-                    <div className="flex justify-start">
-                      <label className="block text-gray-500 font-bold my-4 flex items-center">
-                        <input
-                          className="leading-loose text-pink-600 top-0"
-                          type="checkbox"
-                        />
-                        <span className="ml-2 text-sm py-2 text-gray-600 text-left">
-                          Accept the{" "}
-                          <a
-                            href="/"
-                            className="font-semibold text-black border-b-2 border-gray-200 hover:border-gray-500"
-                          >
-                            Terms and Conditions of the site{" "}
-                          </a>
-                          and
-                          <a
-                            href="/"
-                            className="font-semibold text-black border-b-2 border-gray-200 hover:border-gray-500"
-                          >
-                            the information data policy.
-                          </a>
-                        </span>
-                      </label>
-                    </div>
+
                     <button
                       type="submit"
-                      onClick={register}
+                      onClick={signIn}
                       className="mt-3 text-lg font-semibold bg-gray-800 w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:text-white hover:bg-black"
                     >
-                      Register
+                      Sign In
                     </button>
                   </div>
                 </form>
 
-                <div className="text-sm font-semibold block py-6 flex justify-center">
+                <div className="text-sm font-semibold block  py-6 flex justify-center">
                   <Link
-                    to="/sign-in"
+                    to="/create-account"
                     className="text-black font-normal border-b-2 border-gray-200 hover:border-teal-500"
                   >
-                    You're already member?{" "}
-                    <span className="text-black font-semibold">Login</span>
+                    Don't have a account?{" "}
+                    <span className="text-black font-semibold">
+                      Create one here.
+                    </span>
                   </Link>
                 </div>
               </div>
@@ -140,4 +102,4 @@ const CreateAccount = () => {
   );
 };
 
-export default CreateAccount;
+export default SignIn;

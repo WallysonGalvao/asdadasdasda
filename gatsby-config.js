@@ -1,3 +1,11 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
-  plugins: [`gatsby-plugin-postcss`, `gatsby-plugin-react-helmet`],
-}
+  plugins: [
+    "gatsby-plugin-postcss",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-config",
+  ],
+};

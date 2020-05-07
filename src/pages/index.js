@@ -1,9 +1,12 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
 
 const Index = () => {
   return (
     <Layout>
+      <Helmet title="SmartFrame" />
+
       <div className="bg-gray-200 md:overflow-hidden">
         <div className="px-4 py-16">
           <div className="relative w-full md:max-w-2xl md:mx-auto text-center">

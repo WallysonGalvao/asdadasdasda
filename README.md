@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-<a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#zap-executando">Executando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -31,7 +31,19 @@
 
 <br>
 
+## :video_camera: Playlist
+
+Esse projeto tá rolando no canal do [DevPleno](https://devpleno.com/) acompanhe a playlist pelo [YouTube](https://www.youtube.com/watch?v=G89VCfYpSC8&list=PLBNBxpMAbyhUcxi8rSnB3a9a6rqIbnQPO)
+
+### #CódigoEmCasa - Projeto SmartFrame - Parte 6 | DevPleno
+
+Atualmente estou na sexta [aula](https://www.youtube.com/watch?v=IyKWulf3iFY&list=PLBNBxpMAbyhUcxi8rSnB3a9a6rqIbnQPO&index=8)
+
 ## 💻 Projeto
+
+SmartFrame é um porta retrato virtual, nós permite configurar algumas telas para que fiquem passando no celular/tablet. Para mais informações Você pode utilizar a seguinte [URL](https://www.figma.com/file/vPoGU9iO7aSatzVzbbH1CW/smartframe?node-id=0%3A1)
+
+Você pode acessar o site pelo link: https://smartframe-me-987d1.web.app/
 
 ## :rocket: Tecnologias
 
@@ -44,7 +56,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🎨 Layout
 
-Você pode utilizar a seguinte URL para visualizar todas as telas: [Visualizar](https://www.figma.com/file/vPoGU9iO7aSatzVzbbH1CW/smartframe?node-id=0%3A1)
+Como base para esse projeto foram usados protótipos/componentes prontos encontrados no site [Tailwind](https://tailwindcomponents.com/component), em específico os dois projetos abaixo:
+
+- [Layout](https://tailwindcomponents.com/component/landing-page-with-tailwind-css)
+- [Formulário](https://tailwindcomponents.com/component/register-form-with-password-validator-tailwind-css-alpine-js)
+- [Dropdown](https://tailwindcomponents.com/component/multi-level-dropdown)
 
 ## :zap: Executando
 

@@ -1,7 +1,18 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
+import { useAuth } from "../../lib/AuthContext";
+import Dropdown from "../Dropdown";
 
 const Header = () => {
+  const auth = useAuth();
+  const isApp = window.location.href.includes("app");
+  console.log(isApp);
+
+  const signOut = async () => {
+    await auth.signOut();
+    navigate("/");
+  };
+
   return (
     <div className="bg-gray-200 px-4 py-4">
       <div className="w-full md:max-w-6xl md:mx-auto md:flex md:items-center md:justify-between">
@@ -44,19 +55,34 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="hidden md:block">
-          <a
-            href="/"
-            className="inline-block py-1 md:py-4 text-gray-500 hover:text-gray-600 mr-6"
-          >
-            Login
-          </a>
-          <Link
-            to="/create-account"
-            className="inline-block py-2 px-4 text-gray-700 bg-white hover:bg-gray-100 rounded-lg"
-          >
-            Create account
-          </Link>
+        <div className="md:block">
+          {!isApp && auth.isAuth && (
+            <Link
+              to="/app"
+              className="inline-block py-2 px-4 text-gray-700 bg-white hover:bg-gray-100 rounded-lg"
+            >
+              Go to app
+            </Link>
+          )}
+
+          {!isApp && !auth.isAuth && (
+            <>
+              <Link
+                to="/sign-in"
+                className="inline-block py-1 md:py-4 text-gray-500 hover:text-gray-600 mr-6"
+              >
+                Login
+              </Link>
+              <Link
+                to="/create-account"
+                className="inline-block py-2 px-4 text-gray-700 bg-white hover:bg-gray-100 rounded-lg"
+              >
+                Create account
+              </Link>
+            </>
+          )}
+
+          {isApp && <Dropdown />}
         </div>
       </div>
     </div>
