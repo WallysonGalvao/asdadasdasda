@@ -3,7 +3,7 @@ import { Link, navigate } from "gatsby";
 import { useAuth } from "../../lib/AuthContext";
 import "./styles.css";
 
-const Dropdown = () => {
+const DropdownMenu = () => {
   const auth = useAuth();
 
   const signOut = async () => {
@@ -20,7 +20,7 @@ const Dropdown = () => {
         <li>
           <Link
             className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap w-32"
-            to="/"
+            to="/app"
           >
             Home
           </Link>
@@ -49,4 +49,4 @@ const Dropdown = () => {
   );
 };
 
-export default Dropdown;
+export default DropdownMenu;

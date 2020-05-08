@@ -35,9 +35,9 @@
 
 Esse projeto tá rolando no canal do [DevPleno](https://devpleno.com/) acompanhe a playlist pelo [YouTube](https://www.youtube.com/watch?v=G89VCfYpSC8&list=PLBNBxpMAbyhUcxi8rSnB3a9a6rqIbnQPO)
 
-### #CódigoEmCasa - Projeto SmartFrame - Parte 6 | DevPleno
+### #CódigoEmCasa - Projeto SmartFrame - Parte 9 | DevPleno
 
-Atualmente estou na sexta [aula](https://www.youtube.com/watch?v=IyKWulf3iFY&list=PLBNBxpMAbyhUcxi8rSnB3a9a6rqIbnQPO&index=8)
+Atualmente estou na décima [aula](https://www.youtube.com/watch?v=p_52MihXeME&t=1347s)
 
 ## 💻 Projeto
 
@@ -56,7 +56,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🎨 Layout
 
-Como base para esse projeto foram usados protótipos/componentes prontos encontrados no site [Tailwind](https://tailwindcomponents.com/component), em específico os dois projetos abaixo:
+Como base para esse projeto foram usados protótipos/componentes prontos encontrados no site [Tailwind](https://tailwindcomponents.com/component), em específico os projetos abaixo:
 
 - [Layout](https://tailwindcomponents.com/component/landing-page-with-tailwind-css)
 - [Formulário](https://tailwindcomponents.com/component/register-form-with-password-validator-tailwind-css-alpine-js)
@@ -76,7 +76,7 @@ $ yarn install
 2 - Ainda na raiz do projeto, rodar o comando:
 
 ```
-$ gatsby develop
+$ yarn develop
 ```
 
 Feito isso, acessar o endereço http://localhost:8000
@@ -84,7 +84,7 @@ Feito isso, acessar o endereço http://localhost:8000
 Se desejar, pode fazer o build do projeto, usando o seguinte comando:
 
 ```
-$ gatsby build
+$ yarn build
 ```
 
 ## :memo: Licença

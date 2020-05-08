@@ -6,7 +6,9 @@
   "author": "Wallyson Galvão<wallyson.galvao@gmail.com>",
   "layput": "https://www.figma.com/file/vPoGU9iO7aSatzVzbbH1CW/smartframe?node-id=0%3A1",
   "scripts": {
-    "dev": "gatsby develop"
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "deploy": "firebase deploy"
   },
   "keywords": [],
   "license": "ISC",

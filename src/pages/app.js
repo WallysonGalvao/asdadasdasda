@@ -5,7 +5,9 @@ import { useAuth } from "../lib/AuthContext";
 import Layout from "../components/Layout";
 import CreateScenes from "../client-side-routes/app/CreateScene";
 import Scenes from "../client-side-routes/app/Scenes";
+import Scene from "../client-side-routes/app/Scene";
 import UpdatePassword from "../client-side-routes/app/UpdatePassword";
+import Devices from "../client-side-routes/app/Devices";
 
 const ShowEmailNotification = () => {
   const auth = useAuth();
@@ -49,13 +51,17 @@ const ShowEmailNotification = () => {
 
 const App = () => {
   return (
-    <Layout>
+    <Layout app>
       <ShowEmailNotification />
-      <Router basepath="/app">
-        <CreateScenes path="/create-scenes" />
-        <Scenes path="/scenes" />
-        <UpdatePassword path="/update-password" />
-      </Router>
+      <div className="container mx-auto mt-12">
+        <Router basepath="/app">
+          <Scenes path="/" />
+          <Scene path="/scene/:sceneId" />
+          <CreateScenes path="/create-scenes" />
+          <UpdatePassword path="/update-password" />
+          <Devices path="/devices" />
+        </Router>
+      </div>
     </Layout>
   );
 };

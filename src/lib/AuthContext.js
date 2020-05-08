@@ -25,6 +25,8 @@ export const AuthProvider = ({ children }) => {
     });
   }, []);
 
+  /* console.log(JSON.stringify(auth, null, 2)); */
+
   const resendEmailVerification = async () => {
     const user = firebase.auth().currentUser;
     await user.sendEmailVerification();

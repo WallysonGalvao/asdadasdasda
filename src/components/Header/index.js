@@ -1,17 +1,11 @@
 import React from "react";
-import { Link, navigate } from "gatsby";
+import { Link } from "gatsby";
 import { useAuth } from "../../lib/AuthContext";
-import Dropdown from "../Dropdown";
+import DropdownMenu from "../DropdownMenu";
 
-const Header = () => {
+const Header = ({ app }) => {
   const auth = useAuth();
-  const isApp = window.location.href.includes("app");
-  console.log(isApp);
-
-  const signOut = async () => {
-    await auth.signOut();
-    navigate("/");
-  };
+  const isApp = app;
 
   return (
     <div className="bg-gray-200 px-4 py-4">
@@ -82,7 +76,7 @@ const Header = () => {
             </>
           )}
 
-          {isApp && <Dropdown />}
+          {isApp && <DropdownMenu />}
         </div>
       </div>
     </div>

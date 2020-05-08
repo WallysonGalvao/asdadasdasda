@@ -5,11 +5,11 @@ import Footer from "../Footer";
 
 import "../../styles/styles.css";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, app = false }) => {
   return (
     <AuthProvider>
       <div className="font-sans bg-white flex flex-col min-h-screen w-full">
-        <Header />
+        <Header app={app} />
         {children}
         <Footer />
       </div>
