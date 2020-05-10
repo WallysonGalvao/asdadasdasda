@@ -36,6 +36,15 @@ const DropdownMenu = () => {
         </li>
 
         <li>
+          <Link
+            className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap w-32"
+            to="/app/devices"
+          >
+            Devices
+          </Link>
+        </li>
+
+        <li>
           <button
             onClick={signOut}
             className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap w-32 text-left"

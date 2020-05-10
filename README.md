@@ -35,9 +35,9 @@
 
 Esse projeto tá rolando no canal do [DevPleno](https://devpleno.com/) acompanhe a playlist pelo [YouTube](https://www.youtube.com/watch?v=G89VCfYpSC8&list=PLBNBxpMAbyhUcxi8rSnB3a9a6rqIbnQPO)
 
-### #CódigoEmCasa - Projeto SmartFrame - Parte 9 | DevPleno
+### #CódigoEmCasa - Projeto SmartFrame - Parte 13 | DevPleno
 
-Atualmente estou na décima [aula](https://www.youtube.com/watch?v=p_52MihXeME&t=1347s)
+Atualmente estou na décima terceira [aula](https://www.youtube.com/watch?v=leXADs-OcbE)
 
 ## 💻 Projeto
 
